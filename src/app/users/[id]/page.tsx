@@ -1,3 +1,5 @@
+import UserCard from "@/app/components/UserCard";
+
 type UserProps = {
     params: Promise<{
         id: string;
@@ -30,9 +32,7 @@ export default async function User({params}: UserProps) {
 
     return (
         <>
-            <hr/>
-            {errorMessage && <p>{errorMessage}</p>}
-            <p>{user?.name}<br/>{user?.email}<br/>Company: {user?.company.name}</p>
+            <UserCard user={user} errorMessage={errorMessage}/>
         </>
     )
 }
