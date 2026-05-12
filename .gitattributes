@@ -1,2 +1,2 @@
-app/* linguist-documentation=false
-app/* linguist-vendored
+src/app/** linguist-documentation=false
+src/app/** linguist-detectable=true
