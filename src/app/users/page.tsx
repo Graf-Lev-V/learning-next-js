@@ -31,11 +31,11 @@ export default async function Users() {
             {errorMessage && <p>{errorMessage}</p>}
             <div className="grid grid-cols-2 p-6 gap-4">
                 {users.map((user) => 
-                    <div key={user.id} className="bg-gray-200 p-4 rounded-md shadow-md hover:bg-gray-300">
-                        <Link href={`/users/${user.id}`} className="text-blue-600 font-bold text-lg">{user.name}</Link><br/>
+                    <Link href={`/users/${user.id}`} key={user.id} className="bg-gray-200 p-4 rounded-md shadow-md hover:bg-gray-300">
+                        <p className="text-blue-600 font-bold text-lg">{user.name}</p>
                         <p className="text-gray-600 text-sm">{user.email}</p>
                         <p className="text-gray-600 text-sm">Company: {user.company.name}</p>
-                    </div>
+                    </Link>
                 )}
             </div>
         </>
